@@ -23,8 +23,20 @@ app.get( "/students", ( req, res ) => {
     res.send( data );
 } );
 
-app.get('/students/:id', ( req, res ) => {
+app.get( "/students/:id", ( req, res ) => {
     res.send( data[req.params.id] );
   } );
+
+app.get( "/welcome", ( req, res ) => {
+    res.send( "<h1>Welcome</h1>" );
+} );
+
+app.get( "/me", ( req, res ) => {
+    res.send( {
+        name: "Alex",
+        age: 12,
+        height: 1.4
+    } );
+} );
 
 app.listen( 5000 );
