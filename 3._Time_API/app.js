@@ -22,13 +22,18 @@ app.get( "/month", ( req, res ) => {
     } );
 } );
 
+app.get( "/about", ( req, res ) => {
+    res.send( {
+        version: "0.0.1"
+    } );
+} );
+
 app.listen( 3000 );
 
-function getFormattedMonth() {
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July",
+const monthNames = ["January", "February", "March", "April", "May", "June", "July",
                     "August", "September", "October", "November", "December"];
     const date = new Date();
-
+function getFormattedMonth() {
     const month = date.getMonth() + 1;
     const monthName = monthNames[month - 1];
 
@@ -37,8 +42,8 @@ function getFormattedMonth() {
     return formattedMonth;
 }
 
+const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 function getFormattedDay() {
-    const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     const date = new Date();
 
     const dayOfMonth = date.getDate();
