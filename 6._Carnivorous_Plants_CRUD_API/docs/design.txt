@@ -1,0 +1,17 @@
+GET
+
+/plants - Retrieves the list of plants
+
+/plants/id - Retrieves the plant with the provided id
+
+POST
+
+/plants - Creates a new plant entry
+
+PATCH
+
+/plants/id - Updates a plant with the given id
+
+DELETE
+
+/plants/id - Deletes a plant entry with the given id
