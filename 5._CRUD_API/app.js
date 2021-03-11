@@ -69,7 +69,12 @@ app.delete( "/students/:id", ( req, res ) => {
     }
 } );
 
-app.listen( "8080" );
+app.listen( "8080", ( error ) => { 
+    if ( error ) {
+        console.log( error );
+    }
+    console.log( "Server is running on port ", 8080 );
+ } );
 
 const studentList = [
     {
