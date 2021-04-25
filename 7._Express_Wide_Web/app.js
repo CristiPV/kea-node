@@ -7,6 +7,7 @@ const folderPath = __dirname + "/public";
 
 app.use( express.static( "public" ) );
 
+const fetch = require( "node-fetch" );
 
 app.get( "/", ( req, res ) => {
     res.sendFile( welcomePath );
@@ -25,6 +26,12 @@ app.get( "/potato", ( req, res ) => {
 
 app.get( "/crypto", ( req, res ) => {
     res.sendFile( __dirname + "/public/crypto/crypto.html" );
+} );
+
+app.get( "/proxy", ( req, res ) => {
+    fetch( "https://www.google.com" )
+        .then( res => res.textConverted() )
+        .then( body => res.send( body ) );   
 } );
 
 const server = app.listen( PORT, ( error ) => {
