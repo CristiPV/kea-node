@@ -3,6 +3,7 @@ function submitContact( form ) {
     const data = {};
 
     for( let entry of contactFormData.entries() ){
+        // entry[0] - key; entry[1] - value.
         data[ entry[0] ] = entry[1];
     }
 
@@ -15,6 +16,7 @@ function submitContact( form ) {
     });
 }
 
+/* Alternative way of using FormData ( did not get it to work )
 function submitContact2( form ) {
     fetch('/api/contact2', {
         method: 'POST',
@@ -24,3 +26,4 @@ function submitContact2( form ) {
         body: new FormData( form )
     });
 }
+*/
