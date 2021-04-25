@@ -1,0 +1,19 @@
+use movies
+show collections
+show databases
+db.createCollection("actors")
+
+C 
+db.actors.insert({ name: "Danny Devito" })
+R 
+db.getCollection("actors").find()
+db.actors.find()
+db.actors.find({"name": "Danny Devito"})
+db.actors.find({ height: { $lt: 190 } })
+U  
+db.actors.update({name:"Danny Devito"}, {name:"DannyDegito"})
+db.actors.updateMany({name:"Danny Devito"}, { $set: { name:"DannyDegito"}})
+D
+db.actors.remove({name: "Danny Devito"})
+         .deleteOne({name: "Danny Devito"})
+         .deleteMany({name: "Danny Devito"})

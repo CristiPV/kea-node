@@ -1,0 +1,39 @@
+MongoDB: collections <=> MySQL: tables
+
+collection:
+[
+    {
+        key: "value"
+    }
+]
+
+[
+    {
+        team: "Arsenal",
+        players: []
+    },
+    {
+        profit: 123445
+    }
+]
+
+Use MySQL:
+ - when you have a rigid schema
+    * when you want it to fail at the database level if you don't adhere to the schema
+ - when you have many relations
+
+Use MongoDB:
+ - when you don't have a fixed schema
+ - when you don't mind duplicating data ( no relation support )
+ - great for rapid prototyping
+ - great for simple application
+ - great sharding and clustering support
+
+Beware:
+° A lot of handling for MongoDB happen in the application layer; you can really mess °
+° things up easily with MongoDB. MongoDB depends on the programmer being good rather °
+° than the database being well-designed and allowing for "bad" programmers to use it.°
+
+Would you ever combine MySQL with MongoDB ?
+ * MySQL for Business Data
+ * MongoDB for logs
