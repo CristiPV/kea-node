@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .copyright{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3vw;
+}
