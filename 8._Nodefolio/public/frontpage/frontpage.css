@@ -1,3 +1,25 @@
+.body {
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/images/frontpage-background.jpg");
+    background-color: whitesmoke;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .main {
-    min-height: calc( 100vh - 25vh );
+    display: flex;
+    justify-content: center;
+}
+
+.main .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 15vw;
+    margin-bottom: 20vh;
 }
