@@ -1,6 +1,9 @@
+const dotenv = require('dotenv');
 const express = require( "express" );
 const fs = require( "fs" );
+
 const app = express();
+const dotenvConfig = dotenv.config();
 
 app.use( express.json() );
 app.use( express.urlencoded( { extended: true } ) );
@@ -41,6 +44,10 @@ app.get( "/contact", ( req, res ) => {
 const server = app.listen( PORT, error => {
     if ( error ) {
         console.log( error );
+    }
+
+    if ( dotenvConfig.error ) {
+        console.log( ".env ERROR:", dotenvConfig.error );
     }
 
     console.log( "Server started on port: ", server.address().port );
