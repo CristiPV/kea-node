@@ -1,10 +1,21 @@
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 9vh;
+    background: rgba(245, 245, 245, 0.7);
 }
 
-.footer .copyright{
+.footer .left {
     display: flex;
+    margin-left: 1vw;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer .right {
+    display: flex;
+    margin-right: 2vw;
     justify-content: flex-end;
-    margin-right: 3vw;
+    align-items: center;
 }
