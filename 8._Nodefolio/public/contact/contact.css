@@ -1,0 +1,39 @@
+.body {
+    background-image: 
+    
+    url("/images/contact-background.jpg");
+    background-color: whitesmoke;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    margin-right: 20vw;
+}
+
+.main .text-container p {
+    margin-bottom: 0 !important;
+}
+
+.main .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+    margin-right: 20vw;
+    margin-bottom: 10vh;
+}
+

@@ -1,17 +1,38 @@
+<link rel="stylesheet" href="/contact/contact.css">
+
 <main class="main">
-    <div id="contact-info">
-        <h1>Contact me here !</h1>
+    <div class="text-container">
+        <p class="text-white fs-4 fw-light fst-italic lead">
+            Need to get in touch with  <abbr title="Cristian-Valentin Purcea">me</abbr> ?
+        </p>
+        <p class="text-white fs-3 fw-bold ml-1 font-monospace"> <kbd>Fill</kbd> out this form</p>
+        <p class="text-white-50 fs-5 fw-lighter ml-2">It's that easy !</p>
     </div>
 
-    <form onsubmit="submitContact( this )">
-        <label for="name">Name: </label>
-        <input type="text" name="name" placeholder="Name...">
-
-        <label for="message">Message: </label>
-        <textarea name="message" cols="30" rows="10" placeholder="Message..."></textarea>
-
-        <button type="submit">Submit</button>
-    </form>
+    <div class="form-container text-white">
+        <form onsubmit="submitContact( this )">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name: </label>
+                <input type="text" class="form-control" name="name" placeholder="Name...">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email: </label>
+                <input type="email" class="form-control" name="email" placeholder="email@example.com"> 
+            </div>
+            <div class="mb-3">
+                <label for="subject" class="form-label">Subject: </label>
+                <input type="text" class="form-control" name="subject" placeholder="Subject...">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message: </label>
+                <textarea name="message" class="form-control" cols="30" rows="10" placeholder="Message..."></textarea>
+            </div>
+    
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-outline-light">Submit</button>
+            </div>
+        </form>
+    </div>
     
     <script src="/contact/contact.js"></script>
 </main>
