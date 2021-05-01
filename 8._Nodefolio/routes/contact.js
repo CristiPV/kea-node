@@ -4,12 +4,9 @@ const email = require( "../services/email/email" );
 router.post( "/contact", ( req, res ) => {
     console.log( "Received body: ", req.body );
 
-    const emailText = `Name: ${ req.body.name }\nMessage: ${ req.body.message }`;
+    const emailText = `Name: ${ req.body.name }\nEmail: ${ req.body.name }\nSubject: ${ req.body.subject }\nMessage: ${ req.body.message }`;
 
     email.sendEmail( "Nodefolio Contact", emailText );
-
-    // TODO - make the redirect work
-    res.redirect( "/" );
 } );
 
 /* Alternative way of using FormData ( did not get it to work )
