@@ -37,3 +37,11 @@
     margin-bottom: 10vh;
 }
 
+.form-reset {
+    visibility: hidden;
+}
+
+.toast {
+    background-color: #59d4a1 !important;
+    opacity: .9;
+}

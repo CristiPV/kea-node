@@ -13,7 +13,44 @@ function submitContact( form ) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify( data )
-    });
+    })
+    .then( response => {
+        return response.text();
+    } )
+    .then( result =>
+    {
+        if( result === "OK" ) {
+            showSuccessToast();
+        }
+    } );
+
+    // Reset the form
+    form.getElementsByClassName( "form-reset" )[0].click();
+
+    // Disable the form's redirect
+    return false;
+}
+
+function showSuccessToast () {
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-bottom-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "0", //300
+        "hideDuration": "0", //1000
+        "timeOut": "0", //5000
+        "extendedTimeOut": "0", //1000
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+
+    toastr["success"](" ", "Email has been sent ! :D");
 }
 
 /* Alternative way of using FormData ( did not get it to work )

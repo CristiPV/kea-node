@@ -10,7 +10,7 @@
     </div>
 
     <div class="form-container text-white">
-        <form onsubmit="submitContact( this )">
+        <form onsubmit="return submitContact( this )">
             <div class="mb-3">
                 <label for="name" class="form-label">Name: </label>
                 <input type="text" class="form-control" name="name" placeholder="Name...">
@@ -30,6 +30,7 @@
     
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-outline-light">Submit</button>
+                <button type="reset" class="form-reset">
             </div>
         </form>
     </div>
