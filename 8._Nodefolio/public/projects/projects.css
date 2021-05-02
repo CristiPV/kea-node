@@ -1,7 +1,53 @@
-.project-title {
-    color: blue;
+.body {
+    background-image: url("/images/projects-background.jpg");
+    background-color: whitesmoke;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.project-desc {
-    color: red;
+#carouselProjectsDark {
+    margin-top: 10vh;
+    height: 60vh;
+}
+
+#carouselProjectsDark .carousel-indicators {
+    height: 5%;
+}
+
+#carouselProjectsDark .carousel-inner {
+    display: flex !important;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70% !important;
+    height: 95%;
+}
+
+#carouselProjectsDark .carousel-caption {
+    display: flex;
+    left: 5vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+}
+
+#carouselProjectsDark .carousel-caption .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 24%;
+    margin-right: 1vw;
+}
+
+#carouselProjectsDark .carousel-caption .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    width: 74%;
+    margin-left: 1vw;
 }
