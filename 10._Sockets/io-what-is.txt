@@ -1,0 +1,4 @@
+io - global namespace where I can access all the sockets
+        https://socket.io/docs/v3/namespaces/index.html
+
+In a server -> lots of different rooms -> lots of sockets
