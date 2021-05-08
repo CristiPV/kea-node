@@ -23,6 +23,7 @@ const navbar = fs.readFileSync( __dirname + "/public/navbar/navbar.html", "utf-8
 const frontpage = fs.readFileSync( __dirname + "/public/frontpage/frontpage.html", "utf-8" );
 const projects = fs.readFileSync( __dirname + "/public/projects/projects.html", "utf-8" );
 const contact = fs.readFileSync( __dirname + "/public/contact/contact.html", "utf-8" );
+const resume = fs.readFileSync( __dirname + "/public/resume/resume.html", "utf-8" );
 const footer = fs.readFileSync( __dirname + "/public/footer/footer.html", "utf-8" );
 
 app.get( "/", ( req, res ) => { 
@@ -39,6 +40,10 @@ app.get( "/projects", ( req, res ) => {
 
 app.get( "/contact", ( req, res ) => {
     res.send( navbar + contact + footer );
+} );
+
+app.get( "/resume", ( req, res ) => {
+    res.send( navbar + resume + footer );
 } );
 
 const server = app.listen( PORT, error => {

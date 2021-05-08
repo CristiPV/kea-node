@@ -1,0 +1,19 @@
+.body {
+    background-image: url("/images/resume-background.jpg");
+    background-color: whitesmoke;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+#resume {
+    width: 800px;
+    height: 1200px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
