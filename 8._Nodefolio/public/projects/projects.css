@@ -23,6 +23,10 @@
     height: 95%;
 }
 
+#carouselProjectsDark .carousel-inner .project-desc {
+    width: 70%;
+}   
+
 #carouselProjectsDark .carousel-caption {
     display: flex;
     left: 5vw;

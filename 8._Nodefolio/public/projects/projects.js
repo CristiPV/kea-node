@@ -47,7 +47,7 @@
 
         const projectDescription = document.createElement( "p" );
         projectDescription.classList.add( "project-desc" );
-        projectDescription.classList.add( "fs-4" );
+        projectDescription.classList.add( "fs-6" );
         projectDescription.innerText = project.description;
 
         const projectTechnologies = document.createElement( "p" );
